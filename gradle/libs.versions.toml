@@ -1,0 +1,58 @@
+[versions]
+agp = "8.10.0"
+api = "0.24.0"
+deeplearning4jCore = "1.0.0-M2.1"
+kotlin = "2.0.21"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+lifecycleRuntimeKtx = "2.6.1"
+activityCompose = "1.8.0"
+composeBom = "2024.09.00"
+appcompat = "1.7.1"
+material = "1.12.0"
+nd4jNativePlatform = "1.0.0-M2.1"
+onnxruntimeAndroid = "1.16.3"
+opennlpTools = "2.2.0"
+pytorchEngine = "0.24.0"
+ruPunctModel = "0.2.0"
+tensorflowCorePlatform = "0.4.0"
+tensorflowLite = "2.14.0"
+tensorflowLiteSupport = "0.4.4"
+roomExternalAntlr = "2.8.4"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+api = { module = "ai.djl:api", version.ref = "api" }
+deeplearning4j-core = { module = "org.deeplearning4j:deeplearning4j-core", version.ref = "deeplearning4jCore" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+nd4j-native-platform = { module = "org.nd4j:nd4j-native-platform", version.ref = "nd4jNativePlatform" }
+onnxruntime-android = { module = "com.microsoft.onnxruntime:onnxruntime-android", version.ref = "onnxruntimeAndroid" }
+opennlp-tools = { module = "org.apache.opennlp:opennlp-tools", version.ref = "opennlpTools" }
+pytorch-engine = { module = "ai.djl.pytorch:pytorch-engine", version.ref = "pytorchEngine" }
+ru-punct-model = { module = "ru.deep-pavlov:ru-punct-model", version.ref = "ruPunctModel" }
+tensorflow-core-platform = { module = "org.tensorflow:tensorflow-core-platform", version.ref = "tensorflowCorePlatform" }
+tensorflow-lite = { module = "org.tensorflow:tensorflow-lite", version.ref = "tensorflowLite" }
+tensorflow-lite-support = { module = "org.tensorflow:tensorflow-lite-support", version.ref = "tensorflowLiteSupport" }
+androidx-room-external-antlr = { group = "androidx.room", name = "room-external-antlr", version.ref = "roomExternalAntlr" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
