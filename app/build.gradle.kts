@@ -40,7 +40,10 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.androidx.core.ktx.v170)
+    implementation(libs.androidx.appcompat.v161)
+    implementation(libs.material.v180)
+    implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
