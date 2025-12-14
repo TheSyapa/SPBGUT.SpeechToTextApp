@@ -14,7 +14,7 @@ struct SentencePieceHandle {
 
 // Инициализация (создает только структуру)
 JNIEXPORT jlong JNICALL
-Java_syapa_spbgut_speechtotext_processor_SentencePieceNative_initNative(
+Java_syapa_spbgut_speechtotext_processors_SentencePieceNativeProcessor_initNative(
         JNIEnv* /* env */,
         jobject /* this */) {
 
@@ -25,7 +25,7 @@ Java_syapa_spbgut_speechtotext_processor_SentencePieceNative_initNative(
 
 // Загрузка модели (создает процессор и загружает модель)
 JNIEXPORT jboolean JNICALL
-Java_syapa_spbgut_speechtotext_processor_SentencePieceNative_loadModelNative(
+Java_syapa_spbgut_speechtotext_processors_SentencePieceNativeProcessor_loadModelNative(
         JNIEnv* env,
         jobject /* this */,
         jlong handlePtr,
@@ -50,7 +50,7 @@ Java_syapa_spbgut_speechtotext_processor_SentencePieceNative_loadModelNative(
 
 // Кодирование текста
 JNIEXPORT jintArray JNICALL
-Java_syapa_spbgut_speechtotext_processor_SentencePieceNative_encodeNative(
+Java_syapa_spbgut_speechtotext_processors_SentencePieceNativeProcessor_encodeNative(
         JNIEnv* env,
         jobject /* this */,
         jlong handlePtr,
@@ -74,7 +74,7 @@ Java_syapa_spbgut_speechtotext_processor_SentencePieceNative_encodeNative(
 
 // Декодирование ID
 JNIEXPORT jstring JNICALL
-Java_syapa_spbgut_speechtotext_processor_SentencePieceNative_decodeNative(
+Java_syapa_spbgut_speechtotext_processors_SentencePieceNativeProcessor_decodeNative(
         JNIEnv* env,
         jobject /* this */,
         jlong handlePtr,
@@ -99,7 +99,7 @@ Java_syapa_spbgut_speechtotext_processor_SentencePieceNative_decodeNative(
 
 // Освобождение ресурсов
 JNIEXPORT void JNICALL
-Java_syapa_spbgut_speechtotext_processor_SentencePieceNative_releaseNative(
+Java_syapa_spbgut_speechtotext_processors_SentencePieceNativeProcessor_releaseNative(
         JNIEnv* /* env */,
         jobject /* this */,
         jlong handlePtr) {

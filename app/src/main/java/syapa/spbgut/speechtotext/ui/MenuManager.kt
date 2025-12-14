@@ -1,16 +1,13 @@
 package syapa.spbgut.speechtotext.ui
 
-import android.os.Build
 import android.view.MenuItem
 import android.view.View
-import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.PopupMenu
 import syapa.spbgut.speechtotext.MainActivity
 import syapa.spbgut.speechtotext.R
 
 class MenuManager(private val activity: MainActivity) {
 
-    @RequiresApi(Build.VERSION_CODES.N)
     fun showMenu(anchor: View) {
         val popup = PopupMenu(activity, anchor)
         popup.menuInflater.inflate(R.menu.main_menu, popup.menu)
