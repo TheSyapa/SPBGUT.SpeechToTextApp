@@ -32,7 +32,7 @@ class PermissionManager(private val activity: MainActivity) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(activity, "Разрешение на микрофон получено!", Toast.LENGTH_SHORT)
                     .show()
-                (activity as MainActivity).speechRecognitionManager.resetSpeechRecognizer()
+                activity.speechRecognitionManager.resetSpeechRecognizer()
             } else {
                 Toast.makeText(
                     activity,

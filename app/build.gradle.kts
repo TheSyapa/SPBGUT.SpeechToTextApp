@@ -8,6 +8,10 @@ android {
     namespace = "syapa.spbgut.speechtotext"
     compileSdk = 35
 
+    androidResources {
+        noCompress += setOf("onnx", "model", "bin", "yaml")
+    }
+
     defaultConfig {
         applicationId = "syapa.spbgut.speechtotext"
         minSdk = 21
@@ -16,6 +20,14 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags += ""
+            }
+        }
+        ndk {
+            abiFilters += setOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
+        }
     }
 
     buildTypes {
@@ -37,9 +49,25 @@ android {
     buildFeatures {
         compose = true
     }
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
+        }
+    }
+    packagingOptions {
+        pickFirst("lib/arm64-v8a/libc++_shared.so")
+        pickFirst("lib/armeabi-v7a/libc++_shared.so")
+        pickFirst("**/libc++_shared.so")
+    }
+
 }
 
 dependencies {
+    implementation(libs.onnxruntime.android)
+    implementation(libs.snakeyaml)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.core)
     implementation(libs.androidx.core.ktx.v170)
     implementation(libs.androidx.appcompat.v161)
     implementation(libs.material.v180)
@@ -54,6 +82,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(libs.litert.support.api)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

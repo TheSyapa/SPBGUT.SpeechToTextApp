@@ -51,7 +51,7 @@ class CustomRecognitionListener(private val activity: MainActivity) : Recognitio
             android.util.Log.e(TAG, "Recognition error: $errorMsg")
 
             if (error == SpeechRecognizer.ERROR_CLIENT) {
-                (activity as MainActivity).speechRecognitionManager.resetSpeechRecognizer()
+                activity.speechRecognitionManager.resetSpeechRecognizer()
             }
         }
     }

@@ -10,6 +10,8 @@ coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
+kotlinxCoroutinesAndroid = "1.7.3"
+kotlinxCoroutinesCore = "1.7.3"
 lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.8.0"
 composeBom = "2024.09.00"
@@ -21,10 +23,12 @@ onnxruntimeAndroid = "1.16.3"
 opennlpTools = "2.2.0"
 pytorchEngine = "0.24.0"
 ruPunctModel = "0.2.0"
+snakeyaml = "2.0"
 tensorflowCorePlatform = "0.4.0"
 tensorflowLite = "2.14.0"
 tensorflowLiteSupport = "0.4.4"
 roomExternalAntlr = "2.8.4"
+litertSupportApi = "1.4.1"
 
 [libraries]
 androidx-appcompat-v161 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
@@ -47,6 +51,8 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 material-v180 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 nd4j-native-platform = { module = "org.nd4j:nd4j-native-platform", version.ref = "nd4jNativePlatform" }
@@ -54,10 +60,12 @@ onnxruntime-android = { module = "com.microsoft.onnxruntime:onnxruntime-android"
 opennlp-tools = { module = "org.apache.opennlp:opennlp-tools", version.ref = "opennlpTools" }
 pytorch-engine = { module = "ai.djl.pytorch:pytorch-engine", version.ref = "pytorchEngine" }
 ru-punct-model = { module = "ru.deep-pavlov:ru-punct-model", version.ref = "ruPunctModel" }
+snakeyaml = { module = "org.yaml:snakeyaml", version.ref = "snakeyaml" }
 tensorflow-core-platform = { module = "org.tensorflow:tensorflow-core-platform", version.ref = "tensorflowCorePlatform" }
 tensorflow-lite = { module = "org.tensorflow:tensorflow-lite", version.ref = "tensorflowLite" }
 tensorflow-lite-support = { module = "org.tensorflow:tensorflow-lite-support", version.ref = "tensorflowLiteSupport" }
 androidx-room-external-antlr = { group = "androidx.room", name = "room-external-antlr", version.ref = "roomExternalAntlr" }
+litert-support-api = { group = "com.google.ai.edge.litert", name = "litert-support-api", version.ref = "litertSupportApi" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

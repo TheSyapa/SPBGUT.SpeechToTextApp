@@ -9,4 +9,9 @@
         android:id="@+id/menu_save"
         android:title="Сохранить в файл"
         android:icon="@drawable/ic_save"/>
+
+    <item
+        android:id="@+id/menu_punctuate"
+        android:title="Расставить пунктуацию"
+        android:icon="@drawable/ic_punc"/>
 </menu>
